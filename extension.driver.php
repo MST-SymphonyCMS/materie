@@ -16,14 +16,9 @@
 		Delegates:
 	-------------------------------------------------------------------------*/
 
-    public function appendAssets()
-    {
-        $callback = Symphony::Engine()->getPageCallback();
-
-        if ($callback['driver'] == 'publish' && $callback['context']['page'] !== 'index') {
-            Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/materie/assets/materie.publish.css');
-            Administration::instance()->Page->addScriptToHead(URL . '/extensions/materie/assets/materie.publish.js');
-        }
+    public function appendAssets(){
+      Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/materie/assets/materie.publish.css');
+      Administration::instance()->Page->addScriptToHead(URL . '/extensions/materie/assets/materie.publish.js');
     }
 
 	}
