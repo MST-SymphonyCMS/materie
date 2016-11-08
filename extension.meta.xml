@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="materie" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
-	<name>»Materie« Backend Theme</name>
+	<name>Materie Backend Theme</name>
 	<description>Material Design inspired backend Style to override the Symphony CMS standard styles</description>
 	<repo type="github">https://github.com/animaux/materie</repo>
 	<types>

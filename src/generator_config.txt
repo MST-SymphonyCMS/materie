@@ -1,0 +1,5 @@
+# Font Squirrel Font-face Generator Configuration File
+# Upload this file to the generator to recreate the settings
+# you used to create these fonts.
+
+{"mode":"expert","formats":["woff","woff2"],"tt_instructor":"keep","fix_gasp":"xy","fix_vertical_metrics":"N","metrics_ascent":"","metrics_descent":"","metrics_linegap":"","add_spaces":"Y","add_hyphens":"Y","fallback":"none","fallback_custom":"100","options_subset":"none","subset_range":["english","french","german","norwegian"],"subset_custom":"\u00b7\u00d7:D\u2023\u2055\u205d\ufb01\ufb00\ufb02\ufb03\ufb04\u00b9\u00b2\u00b3\u2e19\u2070\u2074\u2075\u2076\u2077\u2078\u2079\u00bc\u00bd\u00be","subset_custom_range":"","subset_ot_features_list":"","ot_features":["onum","ss01"],"css_stylesheet":"roboto.css","filename_suffix":"","spacing_adjustment":"0","rememberme":"Y"}
