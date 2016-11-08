@@ -2,6 +2,8 @@
 
 Material Design inspired Backend Style to override the Symphony CMS standard styles.
 
+![Symphony CMS »Materie« Backend Theme](https://cloud.githubusercontent.com/assets/446874/20099990/82f4eeb4-a5bb-11e6-8c3d-2d3fc03f2c8c.png)
+
 ## Usage
 
 Install and activate.

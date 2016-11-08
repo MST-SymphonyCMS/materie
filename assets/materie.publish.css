@@ -2,6 +2,36 @@
   Style definition for the Symphony backend
 */
 
+/* Fonts */
+
+@font-face {
+font-family: 'Roboto';
+src: url('roboto-regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: url('roboto-bold.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: url('roboto-italic.woff') format('woff');
+font-weight: normal;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: url('roboto-bolditalic.woff') format('woff');
+font-weight: bold;
+font-style: italic;
+}
+
 /*--------------------------------------------------------------------------
 Structure
 --------------------------------------------------------------------------*/
@@ -576,16 +606,18 @@ Single page
 
 .field {
 box-sizing: border-box;
-min-height: 4.7rem;
-margin-bottom: 1.5rem;
+min-height: 5rem;
+margin-bottom: 2rem;
 }
 
 /* Checkboxes */
 
 div.field-checkbox {
 min-height: 1.6rem;
-padding: 1rem;
-background: White;
+padding: 1rem 0;
+border-width: 0 0 0.1rem 0;
+border-style: solid;
+border-color: rgba(0, 0, 0, 0.25);
 }
 
 .field-checkbox label {
@@ -593,7 +625,7 @@ margin-bottom: 0;
 }
 
 .field-checkbox:first-child {
-margin-top: 1.8rem;
+margin-top: .7rem;
 }
 
 .field-checkbox + .field:not(.field-checkbox) {
@@ -647,7 +679,7 @@ border-bottom-color: rgba(221, 68, 34, 0.3);
 
 #contents .actions {
 padding: 1.8rem;
-background-color: rgb(240, 240, 240);
+background-color: rgb(220,220,220);
 }
 
 .page-index #contents .actions {
@@ -671,7 +703,7 @@ margin: 1rem -1.8rem 0 -1.8rem;
 
 .page-single #contents .actions *,
 .single #contents .actions * {
-margin: 0.4rem;
+/* margin: 0.4rem; */
 }
 
 .page-single #contents .actions input,
@@ -889,7 +921,7 @@ width: 3rem;
 height: 3rem;
 text-indent: -1000em;
 border: none;
-background: url(../img/symphony.calendar.svg) 0 -3rem no-repeat;
+background: url(../../../symphony/assets/img/symphony.calendar.svg) 0 -3rem no-repeat;
 background-size: 3rem 9rem;
 opacity: 0.3;
 }
@@ -967,7 +999,7 @@ left: 0;
 width: 3rem;
 height: 3rem;
 margin-top: -1.5rem;
-background: url(../img/symphony.calendar.svg) 0 0 no-repeat;
+background: url(../../../symphony/assets/img/symphony.calendar.svg) 0 0 no-repeat;
 opacity: 0.3;
 }
 
@@ -1217,7 +1249,7 @@ overflow-y: scroll;
 body {
 font-size: 127.28%;
 line-height: 1.35;
-background-color: rgb(240,240,240);
+background-color: rgb(220,220,220);
 }
 
 body,
@@ -1226,10 +1258,7 @@ input,
 select,
 optgroup {
 color: #222;
-font-family: Roboto, '-apple-system', 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
--moz-font-feature-settings: "ss01";
--webkit-font-feature-settings: "ss01";
-font-feature-settings: 'ss01';
+font-family: 'Roboto', '-apple-system', 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
 }
 
 /* Headlines */
@@ -1338,7 +1367,7 @@ font-size-adjust: 0;
 }
 
 i, var {
-color: #a9a9a9;
+color: rgba(0, 0, 0, .2);
 font-style: normal;
 }
 
@@ -1351,7 +1380,7 @@ padding: 1rem 0;
 
 legend {
 padding: 0;
-color: rgba(0, 0, 0, 0.65);
+color: rgba(0, 0, 0, .65);
 font-weight: bold;
 line-height: 1;
 }
@@ -1360,7 +1389,7 @@ label {
 display: block;
 position: relative;
 margin-bottom: 1.5rem;
-color: grey;
+color: rgba(0, 0, 0, .6);
 }
 
 label > i,
@@ -1585,29 +1614,21 @@ Inputs, text areas, selects
 input,
 textarea,
 select[multiple],
+select,
 .field-value-readonly {
 box-sizing: border-box;
 width: 100%;
 margin-top: 0.2rem;
-padding: 0.2rem 0.3rem;
+padding: 0.2rem 0;
 font-family: inherit;
 font-size: 110%;
-/* 	border-width: 0 0 0.1rem 0; */
-border-width: 0;
+border-width: 0 0 0.1rem 0;
 border-style: solid;
 border-color: rgba(0, 0, 0, 0.25);
-background: White;
-
+border-radius: 0;
+background: transparent;
 }
 
-input,
-textarea,
-select[multiple],
-.field-value-readonly,
-select,
-div.field-checkbox {
-box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
-}
 
 input[type=file] {
 height: auto;
@@ -1623,7 +1644,7 @@ textarea:active,
 textarea:focus,
 select[multiple]:active,
 select[multiple]:focus {
-border-color: rgba(0, 0, 0, 0.4);
+border-color: rgba(0, 0, 0, 0.6);
 outline: none;
 }
 
@@ -1731,7 +1752,7 @@ button,
 .apply-button-right,
 .apply-label-left,
 .apply-label-right {
-margin-left: 0.5rem;
+/* margin-left: 0.5rem; */
 padding: 0.5rem 1rem;
 color: rgb(85,85,85);
 background-color: rgb(250,250,250);
@@ -1747,7 +1768,7 @@ margin-left: 0;
 
 .actions .button,
 .frame .button {
-background-color: WhiteSmoke;
+background-color: White;
 box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -1877,26 +1898,19 @@ display: block;
 -moz-appearance: none;
 -ms-appearance: none;
 -o-appearance: none;
+-webkit-appearance: none;
 appearance: none;
 min-width: 17rem;
 margin: 0;
-padding: .45rem 3rem .45rem 1rem;
-color: rgb(60,60,60);
-border: none;
-border-radius: 0.2rem;
--webkit-appearance: none;
+padding: .5rem 0;
+color: rgba(0,0,0,.8);
 background: transparent;
 outline: none;
 cursor: pointer;
-background-color: white;
-background-image: url("data:image/svg+xml;charset=UTF-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' width='32px' height='32px' viewBox='0 0 32 32'><g><polyline fill='none' stroke='LightGray' stroke-width='2' stroke-miterlimit='10' points='4,11 16,22 28,11 '/></g></svg>");
+background-image: url("data:image/svg+xml;charset=UTF-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' width='32px' height='32px' viewBox='0 0 32 32'><g><polyline fill='none' stroke='rgba(0, 0, 0, 0.25)' stroke-width='2' stroke-miterlimit='10' points='4,11 16,22 28,11 '/></g></svg>");
 background-repeat: no-repeat;
 background-position: right .6rem top .5rem;
 background-size: 2rem 2rem;
-}
-
-.field select {
-margin: 0.2rem 0 0 0;
 }
 
 .apply.inactive select {
@@ -3206,6 +3220,16 @@ text-shadow: none;
 
 #context ul.tabs {
 margin: 2rem 0 0 -1.1rem;
+}
+
+/* Association UI tweaks */
+
+[data-interface^="aui-selector"] .selectize-control {
+padding: 0;
+}
+
+.aui-editor-create {
+padding: 2rem 0 0 0;
 }
 
 /* Documenter */
